@@ -1,5 +1,4 @@
-import React from 'react'
-import Login from './Login' 
+import React from 'react' 
 import Rental from './Rental'
 import Slopes from './Slopes'
 import ApptForm from './ApptForm'
@@ -13,8 +12,8 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      
       <Home />
-      <Login />
       <Rental />
       <Slopes />
       <ApptForm />
