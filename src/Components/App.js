@@ -5,19 +5,40 @@ import ApptForm from './ApptForm'
 import NavBar from './NavBar'
 import Home from './Home'
 import '../App.css';
-import { Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
   
   return (
-    <div className="App">
-      <NavBar />
+    <>
       
-      <Home />
-      <Rental />
-      <Slopes />
-      <ApptForm />
-    </div>
+        <Router>  
+          <NavBar/>
+          <Switch>
+            <Route path ="/" exact></Route>
+          </Switch>
+        </Router>
+
+        {/* <Route exact path="/">
+          <Home />
+        </Route>
+
+        <Route> 
+          <Rental path="/Rental"/>
+        </Route>
+
+        <Route>
+          <Slopes path="/Slopes"/>
+        </Route>
+
+        <Route>
+          <ApptForm path="/ApptForm"/>
+        </Route> */}
+
+     
+   
+      
+    </>
   );
 }
 
