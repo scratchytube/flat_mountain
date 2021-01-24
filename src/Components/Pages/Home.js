@@ -1,13 +1,14 @@
-import "./App.css"
-import HeroSection from "./HeroSection"
-import React from "react"
+import React from 'react'
+import HeroSection from '../HeroSection'
 
-function Home (){ 
+const Home = () => {
+
+
     return (
-        <>
-        <HeroSection />
-        </>
-    )
+      <>
+      <HeroSection />
+      </>
+  )
 }
 
 export default Home
