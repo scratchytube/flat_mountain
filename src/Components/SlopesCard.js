@@ -1,8 +1,15 @@
 import React from 'react'
 
-const SlopesCard = () => {
+const SlopesCard = ({difficulty,altitude,name}) => {
 return (
-    <h1>stop with the errors</h1>)
+    <>
+    <h1>Slopes and Tracks</h1>
+    <p> Name: {name}</p>
+    <p> Altitude: {altitude}</p>
+    <p> Difficulty: {difficulty}</p>
+
+    </>
+)
 }
 
 export default SlopesCard
