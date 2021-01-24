@@ -18,6 +18,7 @@ export const Button =({children, type, onClick, buttonStyle, buttonSize}) =>
      //check if valid, if yes, use the first style/size in css array
 
      return (
+         //will change link-to login page when user set up
          <Link to="/ApptForm" className="btn-mobile">
          <button
          className={`btn ${checkButtonStyle} ${checkButtonSize}`}
