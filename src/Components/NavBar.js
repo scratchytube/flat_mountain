@@ -40,17 +40,17 @@ window.addEventListener("resize", showButton)
                     </Link>
                 </li>
                 <li className = "nav-item">
-                    <Link to= "/ApptForm" className = "nav-links" onClick={closeMobileMenu}>
+                    <Link to= "/appointments" className = "nav-links" onClick={closeMobileMenu}>
                     Appointments
                     </Link>
                 </li>
                 <li className = "nav-item">
-                    <Link to= "/Rental" className = "nav-links" onClick={closeMobileMenu}>
+                    <Link to= "/rentals" className = "nav-links" onClick={closeMobileMenu}>
                     Rental
                     </Link> 
                 </li>
                 <li className = "nav-item">
-                    <Link to= "/Slopes" className = "nav-links" onClick={closeMobileMenu}>
+                    <Link to= "/slopes" className = "nav-links" onClick={closeMobileMenu}>
                     Slopes and Tracks
                     </Link>
                 </li>

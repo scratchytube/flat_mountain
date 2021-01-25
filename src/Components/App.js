@@ -20,24 +20,28 @@ function App() {
               <Home />
             </Route>
 
-        <Route path="/ApptForm" >
+        <Route path="/appointments" >
           <ApptForm />
         </Route>
-
-        <Route> 
-          <Rental path="/Rental"/>
+        
+        <Route path="/slopes">
+          <Slopes  />
         </Route>
 
-        <Route>
-          <Slopes path="/Slopes" />
+        <Route path="/rentals"> 
+          <Rental />
         </Route>
 
-        {/* <Route>
+       {/* <Route>
           <Slopes path="*" />
           <h1>404 not found🏂</h1>
         </Route> */}
+
           </Switch>
         </Router>
+
+        
+          
     </>
   );
 }

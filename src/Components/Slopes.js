@@ -1,7 +1,7 @@
 import React from 'react'
 import SlopesCard from './SlopesCard'
 
-const Slopes = ({Slopes}) => {
+const Slopes = () => {
     return (
 
         <SlopesCard />
