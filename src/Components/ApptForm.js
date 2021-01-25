@@ -4,7 +4,7 @@ import Appointment from './Appointment'
 
 const ApptForm = () => {
 const [name, setName] = useState("")
-const [gearRental, setGearRental]= useState("1")
+const [gearRental, setGearRental]= useState(1)
 const [slope, setSlope] = useState("1")
 const [date, setDate] = useState("")
 const [appointments,setAppointments] = useState([])
@@ -16,13 +16,15 @@ useEffect(()=> {
    setAppointments(appointments))
 },[])
 
-// console.log(appointments)
+const handleUpdatedAppointment = appt => {
+   const newAppt = [appt, ...appointments]
+   setAppointments(newAppt)
+}
 
-const appointmentsDetail = appointments.map((appt)=>{
-   return <Appointment appointment={appt}/>
-})
+   const appointment = appointments.map((appt) => (
+      <Appointment appointment={appt}/>
+   ))
 
-// const handleUpdatedAppointment
 
 
 const handleSubmit = (e) => {
@@ -34,7 +36,7 @@ const handleSubmit = (e) => {
       date: date
       }
    
-      fetch(`http://localhost:3000/api/v1/appointments${name}`, {
+      fetch(`http://localhost:3000/api/v1/appointments`, {
             method: "POST",
             headers: {
               'Content-Type': 'application/json',
@@ -42,7 +44,7 @@ const handleSubmit = (e) => {
             body: JSON.stringify(formData),
           })
               .then(response => response.json())
-            //   .then(handleUpdatedAppointment)
+              .then(handleUpdatedAppointment)
 
         }
 
@@ -102,7 +104,9 @@ const handleSubmit = (e) => {
            </form>
            <div className="appointment-container">Your Appointments</div>
            
-           {appointmentsDetail}
+           <div>
+            {appointment}
+           </div>
            
      
       </section>
