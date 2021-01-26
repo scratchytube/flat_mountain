@@ -47,16 +47,17 @@ const handleSubmit = (e) => {
               .then(handleUpdatedAppointment)
 
         }
-
+        
         const renderSlopeList = () => {
+           console.log(slope)
            return(
               slope.map((slope) => {
                  return(
                     <option
                        key={slope.id}
-                       value={slope}
+                       value={slope.id}
                        >
-                     {slope.name()}
+                     {slope.name}
                     </option>
                  )
               })
@@ -65,16 +66,17 @@ const handleSubmit = (e) => {
 
         const renderRentalList = () => {
            return(
-              rental.map((rental => {
+              rental.map((rental) => {
                  return(
                     <option
                     key={rental.id}
-                    value={rental}
+                    value={rental.id}
                     >
                   {rental.sport}
                     </option>
                  )
-              }))
+              }
+              )
            )
         }
 
@@ -104,15 +106,14 @@ const handleSubmit = (e) => {
             <select
             value={rental}
             onChange={changeRentalHandler}>
-             {renderRentalList}
+             {renderRentalList()}
             </select>
             
             <label> Select a Slope</label>
             <select
             value={slope}
             onChange={changeSlopeHandler}>
-             {renderSlopeList}
-            
+             {renderSlopeList()}
             </select>
 
             <label> Date and time</label>

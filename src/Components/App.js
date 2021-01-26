@@ -17,6 +17,7 @@ useEffect(() => {
 fetch(`http://localhost:3000/api/v1/rentals`)
 .then((r) => r.json())
 .then(rentalArray =>
+  // console.log)
   setRental(rentalArray))
 }, 
 []
@@ -27,7 +28,9 @@ useEffect(() => {
   .then((r) => r.json())
   .then(slopeArray => 
     SetSlope(slopeArray))
-})
+},
+[]
+)
 
 
   
