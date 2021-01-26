@@ -10,9 +10,6 @@ function Footer() {
         <p className='footer-subscription-heading'>
           Join the Adventure newsletter to receive news and updates
         </p>
-        <p className='footer-subscription-text'>
-          You can unsubscribe and miss out the deals at any time.
-        </p>
         <div className='input-areas'>
           <form>
             <input
@@ -22,6 +19,9 @@ function Footer() {
               placeholder='Your Email'
             />
             <Button buttonStyle='btn--outline'>Subscribe</Button>
+        <p className='footer-subscription-text'>
+          You can unsubscribe and miss out the deals at any time.
+        </p>
           </form>
         </div>
       </section>
@@ -37,27 +37,23 @@ function Footer() {
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Contact Us</Link>
-            <Link to='/'>Will not Work</Link>
-            <Link to='/'>But it will</Link>
-            <Link to='/'>If we stretch</Link>
+            <Link to='/'>By Email</Link>
+            <Link to='/'>By Xanga</Link>
+            <Link to='/'>By MySpace</Link>
+   
             
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
-            <h2>Videos</h2>
+            <h2>Our Partners</h2>
           
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
+            <Link to='/'>Flatiron School</Link>
+            <Link to='/'>Flat-flix</Link>
+            <Link to='/'>Flat-tify</Link>
+            
           </div>
-          <div class='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
-          </div>
+      
         </div>
       </div>
       <section class='social-media'>

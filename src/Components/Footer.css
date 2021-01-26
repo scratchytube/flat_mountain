@@ -20,8 +20,7 @@
   }
   
   .footer-subscription > p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   .footer-subscription-heading {
@@ -42,7 +41,7 @@
     border: none;
     font-size: 18px;
     margin-bottom: 16px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
   }
   
   .footer-links {
@@ -67,17 +66,19 @@
   }
   
   .footer-link-items h2 {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   
   .footer-link-items > h2 {
-    color: #fff;
+    font-family: fantasy;
+    color:#009CDB;
   }
   
   .footer-link-items a {
     color: #fff;
     text-decoration: none;
     margin-bottom: 0.5rem;
+    
   }
   
   .footer-link-items a:hover {
@@ -86,7 +87,7 @@
   }
   
   .footer-email-form h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   
   .footer-input::placeholder {
