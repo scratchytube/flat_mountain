@@ -7,7 +7,7 @@
 } */
 
 .hero-container {
-    background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.japan-guide.com%2Fe%2Fe7925.html&psig=AOvVaw0vBilkqRCGAnvzGvAWOvsr&ust=1611774530397000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjoh5Wmuu4CFQAAAAAdAAAAABAK") center center/cover 
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.japan-guide.com%2Fe%2Fe7925.html&psig=AOvVaw0vBilkqRCGAnvzGvAWOvsr&ust=1611774530397000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjoh5Wmuu4CFQAAAAAdAAAAABAK") center center/cover 
     no-repeat;
     height: 100vh;
     width: 100%;

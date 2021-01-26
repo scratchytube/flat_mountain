@@ -7,6 +7,8 @@ const [name, setName] = useState("")
 const [date, setDate] = useState("")
 const [appointments,setAppointments] = useState([])
 
+console.log(typeof rental)
+
 
 useEffect(()=> {
    fetch("http://localhost:3000/api/v1/appointments")
@@ -65,19 +67,22 @@ const handleSubmit = (e) => {
         }
 
         const renderRentalList = () => {
-           return(
-              rental.map((rental) => {
-                 return(
-                    <option
-                    key={rental.id}
-                    value={rental.id}
-                    >
-                  {rental.sport}
-                    </option>
-                 )
-              }
-              )
-           )
+           console.log(typeof rental)
+      //      return(
+      //         console.log(rental)
+      //         rental.map((rental) => {
+               
+      //            return(
+      //               <option
+      //               key={rental.id}
+      //               value={rental.id}
+      //               >
+      //             {rental.sport}
+      //               </option>
+      //            )
+      //         }
+      //         )
+      //      )
         }
 
         const changeRentalHandler = event => {
