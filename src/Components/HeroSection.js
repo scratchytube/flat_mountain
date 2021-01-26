@@ -6,8 +6,7 @@ import "../App.css"
 function HeroSection() {
     return (
     <div className="hero-container">
-        <video src="video-1.mp4" autoPlay loop muted/>
-        <h1> The Mountain of the decade</h1>
+        <h1>The Mountain of the decade</h1>
         <p>What are you waiting for? </p>
          <div className="hero-btns">
              <Button 

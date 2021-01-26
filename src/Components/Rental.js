@@ -2,9 +2,18 @@ import React from 'react'
 import RentalCard from './RentalCard'
 
 const Rental = ({rental}) => {
-    console.log(rental)
+
+console.log(rental)
+    const rentalArray = rental.map((gear) => (
+        <RentalCard gear={rental} />
+    ))
     return (
-        <RentalCard />
+        <div>
+            {rentalArray}
+        </div>
+
+        
+        
     )
 }
 

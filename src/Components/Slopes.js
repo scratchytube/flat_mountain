@@ -3,10 +3,15 @@ import SlopesCard from './SlopesCard'
 
 const Slopes = ( {slope} ) => {
     console.log(slope)
-    return (
 
-        <SlopesCard />
-       
+    const slopeArray = slope.map((singleSlope) => (
+        <SlopesCard name={singleSlope.name} altitude={singleSlope.altitude} difficulty={singleSlope.difficulty}/>
+    ))
+
+    return (
+        <div>
+            {slopeArray}
+        </div>
     
     )
 }
