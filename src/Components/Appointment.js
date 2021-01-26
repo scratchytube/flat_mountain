@@ -3,7 +3,7 @@ import React from 'react'
 
 const Appointment = ({appointment}) => {
    const {name, rental, slope, date} = appointment
-  // console.log(appointment)
+  console.log("appt.js",rental)
 
   return (
   <div>

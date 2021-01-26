@@ -16,13 +16,12 @@ function App() {
 
 useEffect(() => {
 fetch(`http://localhost:3000/api/v1/rentals`)
-.then((r) => r.json())
-.then(rentalArray =>
-  // console.log)
-  setRental(rentalArray))
-}, 
-[]
-)
+  .then((r) => r.json())
+  
+  .then(rentalArray =>{
+    console.log("app.js", rentalArray)
+    setRental(rentalArray)
+})}, [])
 
 useEffect(() => {
   fetch(`http://localhost:3000/api/v1/slopes`)
@@ -34,7 +33,7 @@ useEffect(() => {
 )
 
 
-  
+  console.log("app.js", rental)
   return (
     <>
       
