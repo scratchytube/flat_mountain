@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import Rental from './Rental'
 import Slopes from './Slopes'
 import ApptForm from './ApptForm'
+import Footer from "./Footer"
 
 function App() {
 
@@ -61,7 +62,7 @@ useEffect(() => {
           </Switch>
         </Router>
 
-        
+        <Footer />
           
     </>
   );
