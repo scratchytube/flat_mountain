@@ -36,10 +36,11 @@ function Footer() {
             <Link to='/'>Just to align</Link>
           </div>
           <div class='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>By Email</Link>
-            <Link to='/'>By Xanga</Link>
-            <Link to='/'>By MySpace</Link>
+            <h2>Hours</h2>
+            <Link to='/'>Weekends & Holidays</Link>
+            <Link to='/'>8am-4pm</Link>
+            <Link to='/'>Mon - Fri</Link>
+            <Link to='/'>9am - 4pm</Link>
    
             
           </div>
@@ -64,7 +65,9 @@ function Footer() {
               <i class="fas fa-mountain" />
             </Link>
           </div>
-          <small class='website-rights'>Flat Mountain © 2021</small>
+          <small class='website-rights'>Flat Mountain © 2021  All rights reserved.
+          </small>
+          <small class='website-rights'> If you are using a screen reader and are having problems using this website Please call 1800-800-8888</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
