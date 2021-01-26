@@ -1,4 +1,4 @@
-import React from 'react' 
+import React, { useEffect, useState } from 'react' 
 import NavBar from './NavBar'
 import Home from './Pages/Home'
 import '../App.css'
@@ -9,6 +9,27 @@ import Slopes from './Slopes'
 import ApptForm from './ApptForm'
 
 function App() {
+
+  const [slope, SetSlope] = useState([])
+  const [rental, setRental] = useState([])
+
+useEffect(() => {
+fetch(`http://localhost:3000/api/v1/rentals`)
+.then((r) => r.json())
+.then(rentalArray =>
+  setRental(rentalArray))
+}, 
+[]
+)
+
+useEffect(() => {
+  fetch(`http://localhost:3000/api/v1/slopes`)
+  .then((r) => r.json())
+  .then(slopeArray => 
+    SetSlope(slopeArray))
+})
+
+
   
   return (
     <>
@@ -21,15 +42,15 @@ function App() {
             </Route>
 
         <Route path="/appointments" >
-          <ApptForm />
+          <ApptForm SetSlope={SetSlope} slope={slope} rental={rental} setRental={setRental} />
         </Route>
         
         <Route path="/slopes">
-          <Slopes  />
+          <Slopes  slope={slope}/>
         </Route>
 
         <Route path="/rentals"> 
-          <Rental />
+          <Rental rental={rental}  />
         </Route>
 
        {/* <Route>

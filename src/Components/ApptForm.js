@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react'
 import Appointment from './Appointment'
 
 
-const ApptForm = () => {
+const ApptForm = ({rental, slope, setRental, setSlope}) => {
 const [name, setName] = useState("")
-const [gearRental, setGearRental]= useState(1)
-const [slope, setSlope] = useState("1")
 const [date, setDate] = useState("")
 const [appointments,setAppointments] = useState([])
+
 
 useEffect(()=> {
    fetch("http://localhost:3000/api/v1/appointments")
@@ -16,13 +15,14 @@ useEffect(()=> {
    setAppointments(appointments))
 },[])
 
+
 const handleUpdatedAppointment = appt => {
    const newAppt = [appt, ...appointments]
    setAppointments(newAppt)
 }
 
    const appointment = appointments.map((appt) => (
-      <Appointment appointment={appt}/>
+      <Appointment appointment={appt} />
    ))
 
 
@@ -30,9 +30,9 @@ const handleUpdatedAppointment = appt => {
 const handleSubmit = (e) => {
    e.preventDefault()
    const formData = {
-      user_id: name,
-      rental_id: gearRental,
-      slope_id: slope,
+      user: name,
+      rental: rental,
+      slope: slope,
       date: date
       }
    
@@ -47,6 +47,44 @@ const handleSubmit = (e) => {
               .then(handleUpdatedAppointment)
 
         }
+
+        const renderSlopeList = () => {
+           return(
+              slope.map((slope) => {
+                 return(
+                    <option
+                       key={slope.id}
+                       value={slope}
+                       >
+                     {slope.name()}
+                    </option>
+                 )
+              })
+           )
+        }
+
+        const renderRentalList = () => {
+           return(
+              rental.map((rental => {
+                 return(
+                    <option
+                    key={rental.id}
+                    value={rental}
+                    >
+                  {rental.sport}
+                    </option>
+                 )
+              }))
+           )
+        }
+
+        const changeRentalHandler = event => {
+         setRental(event.target.value)    
+         }
+    
+         const changeSlopeHandler = event => {
+               setSlope(event.target.value)
+         }
 
    
    return( 
@@ -64,25 +102,17 @@ const handleSubmit = (e) => {
 
             <label> Gear Rental</label>
             <select
-            id="name"
-            value={gearRental}
-            onChange={(e) => setGearRental(e.target.value)}>
-               <option value="1">Option 1 Helmet Only</option>
-               <option value="2">Option 2 Helmet & Board/Skii</option>
-               <option value="3">Option 3 Helmet & Board/skii & Clothes</option>
-               <option value="4">Option 4 Helmet & Board/skii & Clothes & Goggles</option>
-             
+            value={rental}
+            onChange={changeRentalHandler}>
+             {renderRentalList}
             </select>
+            
             <label> Select a Slope</label>
             <select
-            id="type"
             value={slope}
-            onChange={(e) => setSlope(e.target.value)}>
-               <option value="1">Option 1 Flat Mountain</option>
-               <option value="2">Option 2 Super Flat Mountain</option>
-               <option value="3">Option 3 Flatty McFlatterson Mountain</option>
-               <option value="4">Option 4 Super Dangerous Mountain</option>
-               <option value="5">Option 5 Best Mountain</option>
+            onChange={changeSlopeHandler}>
+             {renderSlopeList}
+            
             </select>
 
             <label> Date and time</label>

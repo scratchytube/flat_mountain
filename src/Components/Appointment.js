@@ -2,14 +2,16 @@ import React from 'react'
 
 
 const Appointment = ({appointment}) => {
-   const {name, gearRental, slope, date} = appointment
-  console.log(appointment)
+   const {name, rental, slope, date} = appointment
+  // console.log(appointment)
+
   return (
   <div>
+       <div> {date}</div>
        <h2>{name}</h2>
-       <p>{gearRental}</p>
-       <p>{slope}</p>
-       <p> {date} </p>
+       <div>{rental.sport}</div>
+       <div>{slope.name}</div>
+       <div>{slope.difficulty}</div>
        
        {/* <button onCLick={handleUpdate}>Update</button>
        <button onClick={handleDelete}>Delete</button> */}

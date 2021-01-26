@@ -1,7 +1,8 @@
 import React from 'react'
 import RentalCard from './RentalCard'
 
-const Rental = () => {
+const Rental = ({rental}) => {
+    console.log(rental)
     return (
         <RentalCard />
     )
