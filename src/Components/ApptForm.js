@@ -64,7 +64,7 @@ const handleSubmit = (e) => {
       
       }
       console.log({formData})
-   
+      //TODO persist
       fetch(`http://localhost:3000/api/v1/appointments`, {
             method: "POST",
             headers: {
@@ -125,14 +125,14 @@ const handleSubmit = (e) => {
       <section>
          <form onSubmit={handleSubmit}>
             <h3> Book a new Appointment</h3>
-            <label> Name</label>
+            {/* <label> Name</label>
             <input 
             type="text" 
             id="name" 
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            />
+            /> */}
 
             <label> Gear Rental</label>
             <select

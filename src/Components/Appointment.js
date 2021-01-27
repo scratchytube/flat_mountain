@@ -5,18 +5,21 @@ const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
   const {name, rental, slope, date, id, confirm } = appointment
   const [confirmAppt, setConfirmAppt] = useState(false)
   // console.log("appt.js",rental)
-  console.log("appointment",appointment)
+  // console.log("appointment",appointment)
+
 
   const boundOnDelete = () => {
     handleDelete(id)
   }
 
+  // console.log("appointment", id)
   const onHandleConfirmClick = () => {
     const updatedObj = {
-      confirm: appointment.confirm = true
+      confirm: "true"
+      
     }
-    
-      fetch(`http://localhost:3001/appointments/${id}`, {
+      //, TODO dynamic id
+      fetch(`http://localhost:3000/api/v1/appointments/${id}`, {
       method: "PATCH",
       headers: {
         'Content-Type': 'application/json',
@@ -25,12 +28,14 @@ const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
     })
         .then(response => response.json())
         .then(handleUpdatedAppt)
+        setConfirmAppt(confirmAppt)
   }
 
   // const onHandleConfirmClick = () => {
   //   setConfirmAppt((confirmAppt) => !confirmAppt)
   // }
-
+  
+  // setConfirmAppt((confirm) => !confirm)
 
 
   return (
@@ -41,7 +46,7 @@ const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
        <div>{slope.name}</div>
        <div>{slope.difficulty}</div>
        
-       <button onClick={onHandleConfirmClick}> {confirmAppt ? "Confirmed!" : "Not Confirmed"}</button>
+       <button onClick={onHandleConfirmClick}> {confirm ? "Confirmed!" : "Not Confirmed"}</button>
        <button apptId={id} onClick={boundOnDelete}>Cancel</button>
    </div>
   )
