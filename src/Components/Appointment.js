@@ -11,7 +11,7 @@ const Appointment = ({appointment, handleDelete}) => {
 
   return (
   <div>
-       <div> {date}</div>
+       <div className="card-div"> {date}</div>
        <h2>{name}</h2>
        <div>{rental.sport}</div>
        <div>{slope.name}</div>

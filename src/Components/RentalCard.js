@@ -5,11 +5,13 @@ const RentalCard = ({gear}) => {
     console.log(gear)
 
     const gearData = gear.map((outfit) => (
-        <div className="cardDiv">
-            <p>Price:{outfit.price}</p>
+      
+        <div className="card-div">
+            <h3>Price:{outfit.price}</h3>
             <p>Age: {outfit.age}</p>
             <p>Available: {outfit.available}</p>
             <p>Sport: {outfit.sport}</p>
+            <img src="https://www.kingkeyser.com/istarimages/p/t/pt-151001%21BURTO.jpg" alt="snowboard"></img>
         </div>
     ))
 

@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+
+.card-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+  margin: 20px;
+  border: blueviolet;
+  overflow: auto;
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  ;
+}
+.card-div img {
+  float: left;
+  margin: 0 15px 0 0;
+}

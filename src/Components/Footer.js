@@ -50,6 +50,7 @@ function Footer() {
             <h2>Our Partners</h2>
           
             <Link to='/'>Flatiron School</Link>
+            <Link to='/'>Bank of Flatiron</Link>
             <Link to='/'>Flat-flix</Link>
             <Link to='/'>Flat-tify</Link>
             

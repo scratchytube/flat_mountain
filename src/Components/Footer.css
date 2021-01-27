@@ -1,6 +1,6 @@
 .footer-container {
     background-image: url("https://www.japan-guide.com/thumb/XYZeXYZe7925_1680.jpg");
-    background-image: no-repeat;
+    background-repeat: no-repeat;
     background-color: #242424;
     padding: 4rem 0 2rem 0;
     display: flex;
@@ -28,11 +28,14 @@
   .footer-subscription-heading {
     margin-bottom: 24px;
     font-size: 24px;
+    color: black;
+    border: black;
   }
   
   .footer-subscription-text {
     margin-bottom: 24px;
     font-size: 20px;
+    color: black;
   }
   
   .footer-input {

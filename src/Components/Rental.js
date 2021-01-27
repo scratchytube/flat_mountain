@@ -8,7 +8,7 @@ console.log(rental)
         <RentalCard gear={rental} />
     ))
     return (
-        <div>
+        <div className="card-div-container">
             {rentalArray}
         </div>
 
