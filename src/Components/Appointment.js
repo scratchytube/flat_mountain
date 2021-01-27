@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 
 const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
-  const {name, rental, slope, date, id } = appointment
+  const {name, rental, slope, date, id, confirm } = appointment
   const [confirmAppt, setConfirmAppt] = useState(false)
   // console.log("appt.js",rental)
   console.log("appointment",appointment)
@@ -12,9 +12,8 @@ const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
   }
 
   const onHandleConfirmClick = () => {
-    let toggle = setConfirmAppt((confirmAppt) => !confirmAppt)
-    let updatedObj = {
-      confirm: toggle
+    const updatedObj = {
+      confirm: appointment.confirm = true
     }
     
       fetch(`http://localhost:3001/appointments/${id}`, {
