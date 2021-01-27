@@ -40,7 +40,9 @@ const handleSubmit = (e) => {
       rental: selectedRental,
       slope: selectedSlope,
       date
+      
       }
+      console.log(formData.selectedRental)
    
       fetch(`http://localhost:3000/api/v1/appointments`, {
             method: "POST",
