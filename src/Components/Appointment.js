@@ -1,9 +1,13 @@
 import React from 'react'
 
 
-const Appointment = ({appointment}) => {
-   const {name, rental, slope, date} = appointment
+const Appointment = ({appointment, handleDelete}) => {
+  const {name, rental, slope, date, id} = appointment
   console.log("appt.js",rental)
+
+  const boundOnDelete = () => {
+    handleDelete(id);
+  }
 
   return (
   <div>
@@ -13,8 +17,8 @@ const Appointment = ({appointment}) => {
        <div>{slope.name}</div>
        <div>{slope.difficulty}</div>
        
-       {/* <button onCLick={handleUpdate}>Update</button>
-       <button onClick={handleDelete}>Delete</button> */}
+       {/* <button onCLick={handleUpdate}>Update</button> */}
+       <button apptId={id} onClick={boundOnDelete}>Delete</button>
    </div>
   )
 }

@@ -9,8 +9,8 @@ const ApptForm = ({
 const [name, setName] = useState("")
 const [date, setDate] = useState("")
 const [appointments,setAppointments] = useState([])
-const [selectedRental, setSelectedRental] = useState("")
-const [selectedSlope, setSelectedSlope] = useState("")
+const [selectedRental, setSelectedRental] = useState("1")
+const [selectedSlope, setSelectedSlope] = useState("1")
 // console.log(typeof rental)
 
 
@@ -27,22 +27,36 @@ const handleUpdatedAppointment = appt => {
    setAppointments(newAppt)
 }
 
-   const appointment = appointments.map((appt) => (
-      <Appointment appointment={appt} />
-   ))
+const handleDelete = (id) => {
+   console.log('deleting id', id)
+   // fetch(`http://localhost:3000/api/v1/appointments/${id}`,{
+   //    method: "DELETE",
+   //  })
+   Promise.resolve()
+   .then(() => {
+      const remainingAppts = appointments.filter(appt => appt.id !== id);
+      setAppointments(remainingAppts);
+   })
+   
+
+}
+
+const appointment = appointments.map((appt) => (
+   <Appointment appointment={appt} handleDelete={handleDelete}/>
+))
 
 
 
 const handleSubmit = (e) => {
    e.preventDefault()
    const formData = {
-      user: name,
-      rental: selectedRental,
-      slope: selectedSlope,
+      user_id: "2", // TODO to update
+      rental_id: selectedRental,
+      slope_id: selectedSlope,
       date
       
       }
-      console.log(formData.selectedRental)
+      console.log({formData})
    
       fetch(`http://localhost:3000/api/v1/appointments`, {
             method: "POST",
