@@ -1,13 +1,38 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
-const Appointment = ({appointment, handleDelete}) => {
-  const {name, rental, slope, date, id} = appointment
+const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
+  const {name, rental, slope, date, id } = appointment
+  const [confirmAppt, setConfirmAppt] = useState(false)
   // console.log("appt.js",rental)
+  console.log("appointment",appointment)
 
   const boundOnDelete = () => {
-    handleDelete(id);
+    handleDelete(id)
   }
+
+  const onHandleConfirmClick = () => {
+    let toggle = setConfirmAppt((confirmAppt) => !confirmAppt)
+    let updatedObj = {
+      confirm: toggle
+    }
+    
+      fetch(`http://localhost:3001/appointments/${id}`, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatedObj),
+    })
+        .then(response => response.json())
+        .then(handleUpdatedAppt)
+  }
+
+  // const onHandleConfirmClick = () => {
+  //   setConfirmAppt((confirmAppt) => !confirmAppt)
+  // }
+
+
 
   return (
   <div className="appointment-card-div">
@@ -17,8 +42,8 @@ const Appointment = ({appointment, handleDelete}) => {
        <div>{slope.name}</div>
        <div>{slope.difficulty}</div>
        
-       {/* <button onCLick={handleUpdate}>Update</button> */}
-       <button apptId={id} onClick={boundOnDelete}>Delete</button>
+       <button onClick={onHandleConfirmClick}> {confirmAppt ? "Confirmed!" : "Not Confirmed"}</button>
+       <button apptId={id} onClick={boundOnDelete}>Cancel</button>
    </div>
   )
 }

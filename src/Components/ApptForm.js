@@ -27,6 +27,7 @@ const handleUpdatedAppointment = appt => {
    setAppointments(newAppt)
 }
 
+
 const handleDelete = (id) => {
    console.log('deleting id', id)
    // fetch(`http://localhost:3000/api/v1/appointments/${id}`,{
@@ -37,12 +38,18 @@ const handleDelete = (id) => {
       const remainingAppts = appointments.filter(appt => appt.id !== id);
       setAppointments(remainingAppts);
    })
-   
+   }
 
-}
+   const handleUpdatedAppt = updatedAppt => {
+      const updatedMyAppointment = appointments.map((misterAppt) => 
+      misterAppt.id === updatedAppt.id ? updatedAppt : misterAppt)
+      setAppointments(updatedMyAppointment)
+   }
+
+
 
 const appointment = appointments.map((appt) => (
-   <Appointment appointment={appt} handleDelete={handleDelete}/>
+   <Appointment  key={appt.id} appointment={appt} handleUpdatedAppt={handleUpdatedAppt} handleDelete={handleDelete}/>
 ))
 
 
