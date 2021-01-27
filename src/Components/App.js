@@ -19,7 +19,7 @@ fetch(`http://localhost:3000/api/v1/rentals`)
   .then((r) => r.json())
   
   .then(rentalArray =>{
-    console.log("app.js", rentalArray)
+    // console.log("app.js", rentalArray)
     setRental(rentalArray)
 })}, [])
 
@@ -33,7 +33,7 @@ useEffect(() => {
 )
 
 
-  console.log("app.js", rental)
+  // console.log("app.js", rental)
   return (
     <>
       

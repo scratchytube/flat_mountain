@@ -3,7 +3,7 @@ import React from 'react'
 
 const Appointment = ({appointment, handleDelete}) => {
   const {name, rental, slope, date, id} = appointment
-  console.log("appt.js",rental)
+  // console.log("appt.js",rental)
 
   const boundOnDelete = () => {
     handleDelete(id);

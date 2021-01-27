@@ -1,14 +1,14 @@
-/* video {
+video {
      object-fit: cover;
      width: 100%;
-     height: 100%;
+     height: 100%; 
      position: fixed;
     z-index: -1;
-} */
+}
 
 .hero-container {
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.japan-guide.com%2Fe%2Fe7925.html&psig=AOvVaw0vBilkqRCGAnvzGvAWOvsr&ust=1611774530397000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjoh5Wmuu4CFQAAAAAdAAAAABAK") center center/cover 
-    no-repeat;
+    /* background-image: url("https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1512_zao_main.jpg") center center/cover 
+    no-repeat; */
     height: 100vh;
     width: 100%;
     display: flex;
@@ -16,6 +16,7 @@
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
     object-fit: contain;
+    z-index: -1;
 
 }
 
