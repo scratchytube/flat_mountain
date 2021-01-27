@@ -9,7 +9,7 @@ const Slopes = ( {slope} ) => {
     ))
 
     return (
-        <div>
+        <div className="slope-container">
             {slopeArray}
         </div>
     

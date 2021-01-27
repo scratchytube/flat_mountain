@@ -53,3 +53,14 @@
   float: left;
   margin: 0 15px 0 0;
 }
+
+.slope-container{
+display: flex;
+flex-direction: column;
+
+}
+.slope-container img {
+  max-width: 100px;
+  max-height: 100px;
+  float: left;
+}
