@@ -21,7 +21,7 @@ const showButton = () => {
 useEffect(()=> {
     showButton()
 },[])
-
+//resize is bad practice, crashes other browser
 window.addEventListener("resize", showButton)
     return(
       <>

@@ -159,9 +159,9 @@ const handleSubmit = (e) => {
             />
 
            </form>
-           <div className="appointment-container">Your Appointments</div>
+           <p>Your Appointments</p>
            
-           <div>
+           <div className="appointment-container">
             {appointment}
            </div>
            

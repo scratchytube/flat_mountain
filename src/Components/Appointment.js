@@ -10,8 +10,8 @@ const Appointment = ({appointment, handleDelete}) => {
   }
 
   return (
-  <div>
-       <div className="card-div"> {date}</div>
+  <div className="appointment-card-div">
+       <div> {date}</div>
        <h2>{name}</h2>
        <div>{rental.sport}</div>
        <div>{slope.name}</div>
