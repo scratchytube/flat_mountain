@@ -7,7 +7,7 @@ const RentalCard = ({gear}) => {
 
     return(
     <div>
-        <p>Available: {gear.available? "Yes" : "no"}</p>
+        <p>Available: Yes</p>
         <p>Sport: {gear.sport}</p>
         <img src={gear.image} alt="snowboard"></img>
     </div>    
