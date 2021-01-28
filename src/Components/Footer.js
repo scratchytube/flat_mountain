@@ -59,7 +59,7 @@ function Footer() {
           <div class='footer-link-items'>
             <h2>Sponsors</h2>
             <Link to='/'>Jiggly</Link>
-            <Link to='/'>Kaelyn</Link>
+            <Link to='/'>Kknmn</Link>
             <Link to='/'>Pauchou</Link>
             <Link to='/'>Ian</Link>
             <Link to='/'>Ethan</Link>

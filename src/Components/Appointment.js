@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import "./Appointment.css"
+
 
 const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
   const {name, rental, slope, date, id, confirm } = appointment
@@ -41,7 +41,6 @@ const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
   return (
   <div className="appointment-card-div">
        <div> {date}</div>
-       <h2>{name}</h2>
        <div>{rental.sport}</div>
        <div>{slope.name}</div>
        <div>{slope.difficulty}</div>
