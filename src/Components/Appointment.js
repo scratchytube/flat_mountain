@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import "./ApptForm.css"
 
 const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
   const {name, rental, slope, date, id, confirm } = appointment
@@ -45,7 +45,7 @@ const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
        <div>{slope.name}</div>
        <div>{slope.difficulty}</div>
        
-       <button onClick={onHandleConfirmClick}> {confirm ? "Confirmed!" : "Not Confirmed"}</button>
+       <button onClick={onHandleConfirmClick} style={{ marginBottom: '10px'}}> {confirm ? "Confirmed!" : "Not Confirmed"}</button>
        <button apptId={id} onClick={boundOnDelete}>Cancel</button>
        
    </div>

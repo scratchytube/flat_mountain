@@ -168,9 +168,10 @@ const handleSubmit = (e) => {
             />
 
            </form>
-           <p>Your Appointments</p>
+           
            
            <div className="appointment-container">
+           <h2>Your Appointments</h2>
             {appointment}
            </div>
      
