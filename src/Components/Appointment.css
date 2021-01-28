@@ -1,0 +1,9 @@
+appointment-container{
+display: flex;
+flex-direction: row-reverse;
+}
+
+appointment-card-div{
+    display: flex;
+    background-color: blue;
+}

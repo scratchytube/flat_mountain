@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import "./Appointment.css"
 
 const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
   const {name, rental, slope, date, id, confirm } = appointment
@@ -48,6 +48,7 @@ const Appointment = ({appointment, handleDelete, handleUpdatedAppt }) => {
        
        <button onClick={onHandleConfirmClick}> {confirm ? "Confirmed!" : "Not Confirmed"}</button>
        <button apptId={id} onClick={boundOnDelete}>Cancel</button>
+       
    </div>
   )
 }

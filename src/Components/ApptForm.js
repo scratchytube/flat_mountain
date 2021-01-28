@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Appointment from './Appointment'
+import "./ApptForm.css"
 
 
 const ApptForm = ({
@@ -122,8 +123,9 @@ const handleSubmit = (e) => {
          // console.log(renderSlopeList())
    
    return( 
-      <section>
-         <form onSubmit={handleSubmit}>
+      <section className="appt-form-div">
+         
+         <form onSubmit={handleSubmit} className="form">
             <h3> Book a new Appointment</h3>
             {/* <label> Name</label>
             <input 
@@ -171,8 +173,8 @@ const handleSubmit = (e) => {
            <div className="appointment-container">
             {appointment}
            </div>
-           
      
+           
       </section>
        
       

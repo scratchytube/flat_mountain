@@ -1,0 +1,45 @@
+form {
+    padding: 2rem;
+    width: 550px;
+    height: 450px;
+    margin: auto;
+    position: relative;
+
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+
+appointment-container{
+    display: flex;
+    flex-direction: column;
+    font-family: fantasy;
+    padding: 20px;
+
+}
+
+appointment-card-div{
+    display: flex;
+    background-color: blue;
+    padding: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+
+appt-form-div{
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+}

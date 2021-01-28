@@ -18,7 +18,9 @@ function Footer() {
               type='email'
               placeholder='Your Email'
             />
+            {/* <Link to='/rentals' className="btn--outline">Subscribe </Link> */}
             <Button buttonStyle='btn--outline'>Subscribe</Button>
+          
         <p className='footer-subscription-text'>
           You can unsubscribe and miss out the deals at any time.
         </p>
@@ -32,8 +34,7 @@ function Footer() {
           
             <Link to='/'>Brian Sahota</Link>
             <Link to='/'>Alfred Wang</Link>
-            <Link to='/'>Something here</Link>
-            <Link to='/'>Just to align</Link>
+         
           </div>
           <div class='footer-link-items'>
             <h2>Hours</h2>
@@ -53,6 +54,17 @@ function Footer() {
             <Link to='/'>Bank of Flatiron</Link>
             <Link to='/'>Flat-flix</Link>
             <Link to='/'>Flat-tify</Link>
+            
+          </div>
+          <div class='footer-link-items'>
+            <h2>Sponsors</h2>
+            <Link to='/'>Jiggly</Link>
+            <Link to='/'>Kaelyn</Link>
+            <Link to='/'>Pauchou</Link>
+            <Link to='/'>Ian</Link>
+            <Link to='/'>Ethan</Link>
+            <Link to='/'>Annie</Link>
+   
             
           </div>
       

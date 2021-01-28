@@ -38,7 +38,7 @@
 }
 
 
-.card-div {
+.card-div-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -49,20 +49,29 @@
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
   ;
 }
-.card-div img {
-  float: left;
-  margin: 0 15px 0 0;
+.card-div-container img {
+ width: 200px;
+ height: 200px;
 }
 
 .slope-container{
 display: flex;
-flex-direction: column;
+flex-direction: row;
+justify-content: center;
+
 
 }
 .slope-container img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 400px;
+  max-height: 400px;
+
   float: left;
+}
+
+.slopes-card-div{
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 appointment-container {
