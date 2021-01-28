@@ -5,7 +5,7 @@ const Slopes = ( {slope} ) => {
     console.log(slope)
 
     const slopeArray = slope.map((singleSlope) => (
-        <SlopesCard name={singleSlope.name} altitude={singleSlope.altitude} difficulty={singleSlope.difficulty}/>
+        <SlopesCard name={singleSlope.name} altitude={singleSlope.altitude} image={singleSlope.image} difficulty={singleSlope.difficulty}/>
     ))
 
     return (

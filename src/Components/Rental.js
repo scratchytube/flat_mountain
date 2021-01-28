@@ -5,7 +5,7 @@ const Rental = ({rental}) => {
 
 console.log(rental)
     const rentalArray = rental.map((gear) => (
-        <RentalCard gear={rental} />
+        <RentalCard gear={gear} />
     ))
     return (
         <div className="card-div-container">

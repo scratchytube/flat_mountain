@@ -30,10 +30,10 @@ const handleUpdatedAppointment = appt => {
 
 const handleDelete = (id) => {
    console.log('deleting id', id)
-   // fetch(`http://localhost:3000/api/v1/appointments/${id}`,{
-   //    method: "DELETE",
-   //  })
-   Promise.resolve()
+   fetch(`http://localhost:3000/api/v1/appointments/${id}`,{
+      method: "DELETE",
+    })
+   // Promise.resolve()
    .then(() => {
       const remainingAppts = appointments.filter(appt => appt.id !== id);
       setAppointments(remainingAppts);
